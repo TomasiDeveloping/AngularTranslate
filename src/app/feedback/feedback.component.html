@@ -1,0 +1,178 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto m-2 p-4">
+      <div class="card">
+        <div class="card-header">
+          <h3>{{ "title" | translate: titleParam }}</h3>
+        </div>
+        <div class="card-body">
+          <form
+            #feedbackForm="ngForm"
+            (ngSubmit)="feedbackForm.form.valid && saveFeedback()"
+            novalidate
+          >
+            <div class="form-group">
+              <label>{{ "name.label" | translate }}</label>
+              <input
+                #name="ngModel"
+                [(ngModel)]="customerFeedback.name"
+                [placeholder]="'name.placeholder' | translate"
+                class="form-control"
+                name="name"
+                required
+                type="text"
+              />
+              <span
+                *ngIf="
+                  (name.touched || feedbackForm.submitted) &&
+                  name.errors?['required']: ''
+                "
+                class="text-danger"
+                translate
+              >
+                requiredErrorMessage
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label>{{ "gender.label" | translate }}</label>
+              <select
+                #gender="ngModel"
+                [(ngModel)]="customerFeedback.gender"
+                class="form-control"
+                data-val="true"
+                name="gender"
+                required
+              >
+                <option value="">{{ "gender.select" | translate }}</option>
+                <ng-container *ngFor="let gender of genderList">
+                  <option value="{{ 'gender.options.' + gender | translate }}">
+                    {{ "gender.options." + gender | translate }}
+                  </option>
+                </ng-container>
+              </select>
+              <span
+                *ngIf="
+                  (gender.touched || feedbackForm.submitted) &&
+                  gender.errors?['required'] : ''
+                "
+                class="text-danger"
+                translate
+              >
+                requiredErrorMessage
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label>{{ "comment.label" | translate }}</label>
+              <textarea
+                #comment="ngModel"
+                [(ngModel)]="customerFeedback.comment"
+                [placeholder]="'comment.placeholder' | translate"
+                class="form-control"
+                name="comment"
+                required
+                type="text"
+              ></textarea>
+              <span
+                *ngIf="
+                  (comment.touched || feedbackForm.submitted) &&
+                  comment.errors?['required'] : ''
+                "
+                class="text-danger"
+                translate
+              >
+                requiredErrorMessage
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label>{{ "rating.label" | translate }}</label>
+              <div class="">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    #rating="ngModel"
+                    [(ngModel)]="customerFeedback.rating"
+                    class="custom-control-input"
+                    id="excellent"
+                    name="rating"
+                    required
+                    type="radio"
+                    value="excellent"
+                  />
+                  <label class="custom-control-label" for="excellent"
+                  >{{ "rating.options.excellent" | translate }}
+                  </label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    #rating="ngModel"
+                    [(ngModel)]="customerFeedback.rating"
+                    class="custom-control-input"
+                    id="good"
+                    name="rating"
+                    required
+                    type="radio"
+                    value="good"
+                  />
+                  <label class="custom-control-label" for="good">{{
+                    "rating.options.good" | translate
+                    }}</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    #rating="ngModel"
+                    [(ngModel)]="customerFeedback.rating"
+                    class="custom-control-input"
+                    id="bad"
+                    name="rating"
+                    required
+                    type="radio"
+                    value="bad"
+                  />
+                  <label class="custom-control-label" for="bad">{{
+                    "rating.options.bad" | translate
+                    }}</label>
+                </div>
+              </div>
+              <span
+                *ngIf="
+                  (rating.touched || feedbackForm.submitted) &&
+                  rating.errors?['required']: ''
+                "
+                class="text-danger"
+                translate
+              >
+                requiredErrorMessage
+              </span>
+            </div>
+
+            <div class="row form-group">
+              <div class="col d-flex justify-content-end">
+                <button class="btn btn-success" translate type="submit">
+                  {{ "submit.label" }}
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="row">
+            <div class="col">
+              <p>
+                &copy;
+                <!-- translation directive — key as a child  -->
+                <small
+                  [translateParams]="copyrightInfoParam"
+                  class="text-muted"
+                  translate
+                >copyright
+                </small>
+                <br/>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

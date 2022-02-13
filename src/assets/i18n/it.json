@@ -1,0 +1,42 @@
+{
+	"CASESPECIFICKEY": "la chiave di traduzione è definita come {case} .",
+	"Casespecifickey": "la chiave di traduzione è definita come {case} .",
+	"aboutPhrase": "<h1>Cos'è Phrase? </h1><p>Phrase è una piattaforma all-in-one per la localizzazione scalabile di software e la gestione delle traduzioni. Che si tratti di applicazioni web o mobili, Phrase ti permette di tradurre qualsiasi tipo di software.</p>",
+	"casespecifickey": "la chiave di traduzione è definita come {case} .",
+	"comment": {
+		"label": "Commento",
+		"placeholder": "Inserisci un commento"
+	},
+	"copyright": "Tutti i diritti riservati. {currentYear} {company}",
+	"gender": {
+		"label": "sesso",
+		"options": {
+			"female": "Femmina",
+			"male": "maschio",
+			"other": "altro"
+		},
+		"select": "Scegliere il genere"
+	},
+	"name": {
+		"label": "nomi",
+		"placeholder": "Inserire il nome"
+	},
+	"pluralization": {
+		"gender": "{gender, select, male{er ist ein} female{Sie ist ein} other{Sie sind }} {gender}.",
+		"items": "Hai selezionato {count, plural, =0{nichts} one{eins} other{mehrere}} {count, plural, =0{} one{Artikel} other{Produkte}}."
+	},
+	"rating": {
+		"label": "Valuta il nostro servizio clienti:",
+		"options": {
+			"bad": "cattivo",
+			"excellent": "eccellente",
+			"good": "buono"
+		}
+	},
+	"requiredErrorMessage": "Questo è un campo obbligatorio.",
+	"submit": {
+		"label": "Invia"
+	},
+	"successfulSubmitMessage": "Grazie per il vostro prezioso feedback!!!\nIl feedback è stato inviato con successo.",
+	"title": "Feedback di servizio per {company}"
+}

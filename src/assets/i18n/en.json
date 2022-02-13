@@ -1,0 +1,42 @@
+{
+	"CASESPECIFICKEY": "THE TRANSLATION KEY IS DEFINED AS {case}.",
+	"Casespecifickey": "The Translation Key Is Defined As {case}.",
+	"aboutPhrase": "<h1>What is Phrase?</h1><p>Phrase is an all-in-one platform for scalable software localization and translation management. Be it web or mobile apps, Phrase enables you to translate any kind of software.</p>",
+	"casespecifickey": "the translation key is defined as {case}.",
+	"comment": {
+		"label": "Comment",
+		"placeholder": "Enter Comment"
+	},
+	"copyright": "All rights reserved. {currentYear} {company}",
+	"gender": {
+		"label": "Gender",
+		"options": {
+			"female": "Female",
+			"male": "Male",
+			"other": "Other"
+		},
+		"select": "Select gender"
+	},
+	"name": {
+		"label": "Name",
+		"placeholder": "Enter Name"
+	},
+	"pluralization": {
+		"gender": "{gender, select, male{He is a} female{She is a} other{They are}} {gender}.",
+		"items": "You have selected {count, plural, =0{nothing} one{one} other{multiple}} {count, plural, =0{} one{item} other{items}}."
+	},
+	"rating": {
+		"label": "Rate our customer service: ",
+		"options": {
+			"bad": "Bad",
+			"excellent": "Excellent",
+			"good": "Good"
+		}
+	},
+	"requiredErrorMessage": "This is a required field.",
+	"submit": {
+		"label": "Submit"
+	},
+	"successfulSubmitMessage": "Thanks for your valuable feedback!!!\nThe feedback has been submitted successfully.",
+	"title": "Service feedback for {company}"
+}
